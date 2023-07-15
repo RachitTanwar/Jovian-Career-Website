@@ -14,6 +14,15 @@
         <h2 class="text-center mt-4 mb-4">About Jovian</h2>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque corrupti veritatis maxime. Incidunt itaque corporis obcaecati nulla possimus, eum expedita commodi nobis sunt ut molestias sed accusantium praesentium voluptatibus amet quo, sint dolorem repellat. Maiores sequi amet alias quos est ipsa ad esse iste fuga temporibus sed in optio et dicta cum corporis rerum laudantium illo, ab dolores, doloribus nostrum quis nemo. Ratione odio nam debitis assumenda autem! Ut reiciendis nam iste doloremque. Fuga minima quae dolores aut vel quis quasi commodi illo molestias quam laboriosam autem asperiores, nam recusandae architecto laudantium exercitationem. Quo a repellendus eligendi laudantium cumque amet hic eos. Vero, repudiandae sed autem sint harum magnam expedita inventore officiis veniam amet tempore tempora similique minima error ab, dignissimos temporibus, maxime natus et. Ducimus quis tempore porro, facilis impedit facere doloremque veritatis iste suscipit commodi accusamus cupiditate molestias unde quaerat! Accusantium unde dolore laudantium ex deleniti totam. Magni saepe quae maxime ducimus repudiandae impedit consequatur laborum earum a consequuntur laboriosam modi autem nesciunt, quo inventore error aperiam quos voluptas, consectetur nisi ea, quia vero. Praesentium distinctio tempora architecto nesciunt perferendis reprehenderit, quis quos corporis fugiat quidem quae sequi incidunt vitae atque exercitationem aliquam veritatis magni accusantium velit rerum!</p>
         <h2 class="text-center mt-4 mb-4">Open Positions</h2>
+        <div>
+            {% for job in jobs %}
+                <div>
+                   <h4 class="text-secondary"> {{job['title']}}</h4>
+                   <div><b>Location: </b>{{job['location']}}</div>
+                   <br>
+                </div>
+            {% endfor %}
+        </div>
     </div>
     <div class="text-center"> 
         <button class="btn btn-primary btn-lg">Contact Us</button>
