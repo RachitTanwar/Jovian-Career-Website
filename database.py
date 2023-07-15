@@ -8,12 +8,12 @@ engine = create_engine(db_connection,connect_args={
 })
 
 
-with engine.connect() as conn:
-    result = conn.execute(text("select * from jobs"))
-    print(result.all())
 
-result_dictionary = []
-for row in result.all():
-    result_dictionary.append(dict(row))
-
-print(result_dictionary)
+def load_jobs_from_db():
+    with engine.connect() as conn:
+        result = conn.execute(text("select * from jobs"))
+        jobs=[]
+    for row in result.all():
+        data = row._mapping  
+        jobs.append(data)
+    return jobs
