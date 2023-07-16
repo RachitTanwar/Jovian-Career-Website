@@ -1,0 +1,38 @@
+<div>
+    <h4>Application Form</h4>
+
+    <form action="/job/{{job['id']}}/apply" method="post">
+        <div class="row">
+            <div class="col mb-3">
+              <input type="text" class="form-control" placeholder="Name" aria-label="Name" name="full_name">
+            </div>
+          </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="emailid">
+            <label for="floatingInput">Email address</label>
+          </div>
+        <div class="mb-3">
+            <label for="basic-url" class="form-label">Your Linkedin URL</label>
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon3">https://example.com</span>
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" name="linkedin-url">
+            </div>
+        </div>
+        <div class="input-group mb-4">
+            <span class="input-group-text">Education</span>
+            <textarea class="form-control" aria-label="With textarea" name="education"></textarea>
+        </div>
+        <div class="input-group mb-4">
+            <span class="input-group-text">Work Experience</span>
+            <textarea class="form-control" aria-label="With textarea" name="experience"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="basic-url" class="form-label">Your Resume URL</label>
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon3">https://example.com</span>
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" name="resume-url">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
