@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{job.title}} - Jovian Careers</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body class="bg-light bg-gradient">
+    {% include 'navbar.html' %}
+    <img  class="img-fluid" id="banner"src="/static/banner.jpg" alt="Career">
+    <div class="container">
+    <h1 class="text-center mt-2 mb-5">Jovian Career</h1>
+    <h2 class="mb-3">{{job.title}}</h2>
+    <p class="lead">{{job.location}}</p class="lead">
+    <h3>Responsibilities</h3>
+        <ul class="lead">
+            {% for line in job.responsibilities.split("\n") %}
+            <li>{{line}}</li>
+            {% endfor %}
+        </ul>
+
+    <h3>Requirements</h3>
+        <ul class="lead">
+            {% for lineR in job.requirements.split("\n") %}
+            <li>{{lineR}}</li>
+            {% endfor %}
+        </ul>
+    <h3>Salary</h3>
+    <p class="lead">{{job.currency}} {{job.salary}}</p class="lead">
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>
